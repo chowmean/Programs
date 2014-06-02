@@ -13,7 +13,7 @@ int main()
 	string t;
 	cin>>t;
 	int n=t.length();long long int val=0;
-	long long int total=0;
+	 int total=0;
 	for(int k=1;k<=n;k++)
 	{
 		for(int j=0;j<=n-k;j++)
