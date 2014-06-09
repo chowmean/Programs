@@ -1,0 +1,312 @@
+1.structure of java app.
+
+static is a keyword to allow direct acess to a member to the class members without object.
+main -> entry point of the application.
+[]->token representing aarray type.
+args-> is a objesct of string type array.
+main(String[] args)->whole is a command line arguement.
+System ->is a class,which can access static member of a system.
+out->is an instance of output string.(object)
+println-> is static method of system classs.
+out is a output stream accessed by system.
+static is must to access the class without creating any object.
+main is a parametric function.array of string can b passed.
+there are two overloaded main funftion in c.
+main(int argc,char[] *argv);  also exists in c.
+hello.main class should not be formed.
+hello.class should not b formed.
+jvm is highly case sensitive.
+
+
+2nd day:::
+
+1.structure of java app.
+2.string to no. conversion.
+3.string/string buffer/stringbuilder classes
+4.stringtokenizer
+5.how to read data from keyboard.
+
+
+array can be representsd as gaurav...  also known as ellipse
+
+
+#System.out.printf("\n the sun =%d",a); also works here.
+
+reading data from keyboard:
+java.util->scanner(class)-encapsulates methods to sscan data from any input stream.
+							system.in is an instance of default input stream(keyboard).
+methods:int -> next() reads one character and returns its ascii value
+		string ->nextLIne() reads entire line and returns s string
+		int ->nextInt()	reads integer value and returns as int
+		float-> nextFloat()
+		
+		
+oops
+____________________________________________________________________________________________________
+
+new- keyword in java which dynamically allocates memory and returns its reference.it executes constructor 
+inolicitily.
+
+how object becomes garbage.
+overloading if constructor.
+use of this keyword.
+
+by default public access modifier.
+		
+instance variables-those variables which intantiate with the instance of the class(object).. accessible through the object only as long as object exist.
+class variables are static,associaied with the class and not the object of the class,therfore they are directly accessible by the name of class without object.
+
+garbage-- any momory location which has no refrence// is garbage and is deleated by the garbage collector.
+
+overloading:static or compile time polymorphism., where multiple methods of the same name with different sign may exist in th same class.
+            retur type is not considered.
+			
+			
+1. types of methods
+2.this  -> is a keyword used to access members of different instance of a class. this can b used along with 
+this.variable;
+this.method();
+this();
+//for(datatype 0 : collection or array )
+//used to read the whole of any type of array;
+
+
+3.overloading of methods
+4.what is statics			
+
+classs stringbuffer-- serialisable they are mutable;
+class present in java.lang
+StringBuffer(String); //constructor
+StringBuffer
+methods in StringBuffer->append(string) 
+insert(int,string);
+replace(int,string);
+reverse();
+StringTokkeniser (java.util)
+	token is as similar to split();
+	it splits the strings into the tokken;
+	two types-StringTokenizer(String);
+			  StringTokenizer(String,"char");
+	methods- countToken()
+	String- nextToken()
+	boolean hasMoreTokens()     :(
+
+static : a static member of a class is associated with class,not the object and is directly accessible by class name without object.
+a static variable exists as single copy shred by all the objects of class.a staticmethod can access only static memebrs of any class directly.
+a static block exists to initialize sttaic members of class,this gets executed only once in life cycle of an application ,JVM executes static block first
+,then static main().  :)
+
+types of methods in a class of java:all variety are possible.
+all types of return and arguements are possible..  :)
+
+new xyz();  will execute with nooo error but it wll become garbage just after the execution of the statement. :)
+
+//from lower to upper auto type casting.
+
+ambiguity ::  if the return of the method overloaded is different t may cause ambiguity..
+like : void d()  and int d()  // though the  function d is overloaded but stilll it is not sure which is to use while calling.. :(
+
+static methods can only access static weather of the same class or of the different class;   :(
+can be used to calculate how many times the class is visited or how many objects are created;  :D
+
+if class contains all static memebers then the class is called singleton : since only one instancce acn exists;
+example:runtime,calender,system,math etc;
+static block: static {};block reserved to initialize static variables;
+when the static mmbers come into existance
+
+when ever a byte code is compiled JVm first finds out the static members and alllocates memory for them after that mein is executed;  ;-(
+System.exit(0);  ::terminates the application.  //exit is a static method of System class. system is a singoleton.. :)
+
+constructor as private
+======================
+since private members are not accesible outside the class so if constructor is private you can not make object of the class...
+instead we will use static method inside the class which will make object of the class and give them value:   :)
+
+
+inheritance
+++++++++++++++
+overriding of functions
+super
+derive a new classs defitnitionn from existing one,by addition new featurs or by reimplimenting
+existing implementation,without disturbing existing appln/class is called as inheritance.
+it consisit of atleast two classes ,one is called as base class nd here it is also called as super.and other is sub class(derived).
+java supports multilevel inheritence only. no multiple inheritance .
+inheritance follows these rules:
+	*top->bottom   father->child   baseclass->subclass   
+	 left = right    father=child     baseclass=subclass
+
+local scope has the highest priority; :)
+
+(((((((((if the sub class has the same data member as that of base class then to change the value of that dTata memeber we cannot direct change the value it will not change the data member of base class
+to change base class we can make object of base class nad assign it the value of sub class now if we change the value memeber of base class wll be changed))))))))))))))
+
+super: its a keyword to access baseclass from the subclass. :(((
+
+constructor cannot be inherited;
+In java subclass constructors implicititily executes base class class default constructors  :D
+
+but for parametric constructor;explicit call is required from sub class constructor is required;
+
+why multiple iheritence not supported in java..?
+
+methods in java classes are overrideable;
+//default constructor is created when there is no other construcctor made..:)
+
+function has two parts :signature and body
+signatuure gets hided and body get oveerrided/.
+
+keep in mind the difference between hide and override.. :)
+
+abstract class:-
+abstraction is done to make inheritance compulsory and an abstrat  class is a general base class, whose object cannot be instantiated on its own.
+there fore inheritance becomes cumpolsory and from the sub class,and from the subclass base class members are made accessible.
+an abstract class may or may not contain abstract methods (an abstract method contains only signature no body)   :)
+and subclass has the resposibility to override and implement all the abstract methods of the base class... :)
+if subcASS	doesnot overrides the all abstract methods of the base then the sub class also get declared as abstract class; :(
+
+abstract is the keyword modifier:
+this modifies definition of a class..
+use to declare class and methods as abstract;
+FINAL:- opposite of abstract ,keyword modifier which declares a constant non-overrideble method and not extendable class. :(
+ex;
+final int x=400; x can never be chaged, final willl not allow the class to b inherited.
+in final class abstract method canot exist;   :)rbi bank :D
+
+*interface and how it is different from noraml classes :
+*interface is a total abstraction of methods none of its method is implemented.
+*interface do not contain intance variables .if anything exist it becomes by default final static 
+*an interface canot be intancetiated
+*through the interface java aachieves multiple inheritance;
+*a class implements one or more interfaces by overriding and implementing all the methods of the interafces,if class doesnot overwrites all the methods of interfacethen class will become abstract class..
+*interface methods gets inherited privately to a class therefore class must t publicly overwrite methods of interface
+*interfaces are protocol;
+*ex-tcp ip;
+
+
+Exception Handling:
+====================
+3 typs of errors 
+
+1.syntax   at the time of compilation 
+2.logical	incorect recsults
+3.runtime   :(      abnormal termination
+
+Exceptions are classes they get instantieted and executed dynamically at runtime.they are executed when JVM doos not finds proper solution of a statement
+whereever and whenever exception triggers JVM stops further processing of the code.skips rest of the statements and controls jumps out of the current blocks and looks for a handler and if 
+not found application terminates abnormally;   :(
+
+exceptions are handled by writting the code in try and catch;
+these are executed in two ways implicitily and explicitily ;
+
+errors can be handled from os variables
+
+classes are present in both exception class and error classs   /////abhishek :D
+
+
+syntax
+
+try     //block
+{
+}
+catch(exception type object)            //method
+{
+}
+finally              //block
+{
+}
+
+catch doesnot have return type since executed by exceptional object;
+try can be nested;
+
+try with out catch compilation error
+
+
+finally block executes only one time in whole life of a progra
+finalize()=like a destructor called implicitily.  just before the termination of the program
+finalize contains the code to be executed before releasing thej memory for example if any file pointer is open then it is closed any connections are open then it is closed;
+
+finally is optional to write;
+
+
+
+jdbc: framework that consist of interfaces and classes use to connect access and manipulate any rdbms data.
+java.sql.*   framework 
+
+java app is front end and the db server is backend.
+interface is the controller.
+mvc architecture:(model view controller)
+
+java application becomes the client and database becomes the server . jdbc fframework is used to connnect client and server.
+steps to connect acess and manipulate:
+ *load a suitable driver.
+ *open and establish connection between data source and client application 
+ *access source of data that could be a view or procedure.
+ *process the data 
+ *close all.
+ 
+ what is driver: drivers are system softwwares which contains the implementatin of jdbc framework. because the framework is totall abstraction :)
+ types of drivers:
+ * type 1 driver: jdbc odbc driver :open database connectivity. (microsoft).this is a bridge between java application and odbc driver.it converts java formatted instructions into the odbc format and vice versa.
+developed by sun microsystem  "sun.jdbc.odbc.JdbcOdbcDriver"
+drawback: this must be implemented in every client.
+*type 2 : native driver.               //jni:java native interface
+these are suuplied by the rdbms itself/they are implemented in antive languages like c and c++. every rdbms will ahve its own drivers which reflects specific features of the rdbms.
+for mysql : "com.mysql.driver.MysqlDriver"
+oracle:"com.jdbc.driver.OracleDriver"
+*type 3 : pure java driver.
+*type 4 : partial native net drivers :implemented by application servers.client request is directed to application server whic further directs it to database.the addvantage of theses type of drivers are client need not to have drivers on client end;
+
+
+how to load the driver:
+Class.forName("driver")throws ClassNotFoundException
+
+example: try{Class/forName("sun.jdbc.odbc.JdbcOdbcDriver");
+				}
+		 catch(ClassNotFoundException ex)
+		 {s.o.p("driver not found")
+		 }
+DriverManager:interface which establishes and returns connection between package and the client using connection string.
+the string may contain protocol the dsl or datasource location. userid and password.
+  static Connection getConnection("connectionstring")throws SQLExeption
+  it returns the connection.
+  connection string contains subprotocol columns /// data source "location" "uid" "pwd"  protocol always jdbc .subprotocol depends on driver .// dsn data source name.
+  Connection is an interface that contains method to create SQL statements.
+  SQL has four parts .. *ddl data definition  *dml data manipulation *dcl data control * tcl transation control
+  
+  connection statement
+  *createStatement()throws sqlexception
+  *PreparedStatement  prepareStatement("sql") throws sqlexception
+  *void setAutoCommit(bool)throwssdf
+  *void savePoint()throws""
+  *boolean commit()""
+  *boolean rollback()""
+  *void close()""
+  prepare statement is for parametric query while create statement is for ad-hoc static.
+  ex: "select * from emp where city=?"//parameterised ?
+  
+  statement:interface : contains method to create and execute sql statements.
+  ResultSet  			 executQuery("select query")""
+  int 					 executeUpdate("dml//ddl")""
+  void             		addBatch("dml//ddl")""
+  
+  PreparedStatement:precompililed parametric query //part of the query is pre compiled b placing different value for the parameters different results can be recieved
+  ResultSet				executeQuery()""
+  int 					executeUpdate()""
+						setInt(index,value)""
+						setDouble(index,value)""
+						setDate(index,value)""
+						setDatatype(index,value)""
+						
+	whatis result set : collection of requested records returned from the select query. an imaginary pointer moves from top to bottom pointing each record one by one.
+	by default resultset is read only and forward only. copied in the client cache
+	ResultSet:
+		boolean		next()""; true means record exists and false means end of the file
+		String 		getString(colname & colindex)""
+		int 		getInt("")""
+		double		getDouble("")""
+		datatype    getDatatype("")""
+		void 		close()
+		
+nodatafound error --- sql :only read one column only once
+invalid cursor state ??? :(
+rs.next is compulsory;
