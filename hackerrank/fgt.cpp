@@ -1,9 +1,9 @@
-#include <iostream>
+ #include <iostream>
 #include<map>
 #include <algorithm>
 #include <string>
-#include<cstdio>
-
+#include <sstream>
+#include <fstream>
 using namespace std;
 string encryp;
 int main()
@@ -15,35 +15,36 @@ while(t--)
 cin>>n;
 char a;
 char b;
-map<char,char>mapping;
+map<char,char>shubh;
 for(int i=0;i<n;i++)
 {
 cin>>a>>b;
-mapping[a]=b;
+shubh[a]=b;
 
 }
 cin>>encryp;
 int len= encryp.length();
 if(n!=0)
-{ 
+{ // decrypting the string
 for(int i=0;i<len;i++)
 {
 char temp=encryp[i];
-if(mapping[temp]!='\0')
-encryp[i]=mapping[temp];
+if(shubh[temp]!=NULL)
+encryp[i]=shubh[temp];
 }
 }
 
-int dot=0,last=0,init=0;
+int p=0,r=0,q=0;
 for(int i=0;i<=len-1;i++)
 {
 if(encryp[i]=='.')
-break;dot=i;
+break;
+p=i;
 }
 
 
-for(int j=len-1;j>=dot;j--)
-{ last=j;
+for(int j=len-1;j>=p;j--)
+{ r=j;
 if(encryp[j]!='0')
 break;
 
@@ -51,24 +52,25 @@ break;
 
 
 for(int i=0;i<len;i++)
-{ init=i;
+{ q=i;
 if(encryp[i]!='0')
 break;
 
 }
 
 
-if(encryp[last]=='.' and last!=init) last--;
+if(encryp[r]=='.' and r!=q) r--;
 
-if(last==init && encryp[init]=='.') cout<<"0";
+if(q==r && encryp[q]=='.') cout<<"0";
 else
-for(int i=init;i<=last;i++)
+for(int i=q;i<=r;i++)
 printf("%c",encryp[i]);
 
 cout<<endl;
 
 }
-
-
+int x;
+cin>>x;
+return 0;
 }
 

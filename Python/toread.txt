@@ -1,0 +1,7 @@
+car 
+Bar 
+Dog
+Scar
+Tar
+car
+tcar
